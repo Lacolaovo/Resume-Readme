@@ -1,0 +1,125 @@
+Cloud Support Engineer Project | Azure • AWS • Monitoring • Incident Response
+
+📌 Overview
+
+This project simulates a real-world enterprise cloud environment focused on monitoring, security, and incident response across hybrid infrastructure.
+
+Built to demonstrate hands-on skills required for:
+
+• Cloud Support Engineer
+• NOC Analyst
+• Junior Cloud Engineer
+
+🎯 Objectives
+
+• Deploy and manage cloud infrastructure in Microsoft Azure and AWS
+• Implement monitoring and alerting pipelines
+• Enforce least-privilege access (RBAC/IAM)
+• Simulate real-world incidents and response workflows
+• Integrate SIEM tools for log analysis and detection
+
+🏗️ Architecture
+
+Azure VNet (10.0.0.0/16)
+│
+├── Subnet: Frontend (10.0.1.0/24)
+│   └── Windows VM (RDP Access)
+│
+├── Subnet: Backend (10.0.2.0/24)
+│   └── Linux VM (SSH Access)
+│
+├── Network Security Groups (NSGs)
+│   ├── Allow: RDP (3389) from trusted IP
+│   ├── Allow: SSH (22)
+│   └── Deny: All other inbound traffic
+│
+├── Azure AD (Entra ID)
+│   ├── RBAC Roles (Reader / Contributor)
+│   └── User Provisioning & Access Control
+│
+├── Monitoring & Logging
+│   ├── Azure Monitor + Log Analytics
+│   ├── AWS CloudWatch
+│   ├── Splunk / Datadog Integration
+│
+└── Alerting System
+    ├── CPU Utilization Alerts
+    ├── Failed Login Attempts
+    └── VM Availability Alerts
+    
+⚙️ Technologies Used
+
+  ☁️ Cloud Platforms
+    • Microsoft Azure
+    • AWS (EC2, S3, IAM, CloudWatch)
+  🔐 Identity & Security
+    • Azure AD (Entra ID)
+    • RBAC (Role-Based Access Control)
+    • Conditional Access & MFA
+    • IAM Policies
+  📊 Monitoring & SIEM
+    • Azure Monitor
+    • Log Analytics Workspace
+    • Splunk
+    • Datadog
+    • AWS CloudWatch
+  🖥️ Systems & Networking
+    • Windows Server VM
+    • Linux VM
+    • TCP/IP, DNS, VPN
+    • Network Security Groups (NSGs)
+  ⚡ Automation
+    • PowerShell (task automation, user management)
+
+🚨 Incident Simulation Scenarios
+
+This lab includes simulated real-world incidents:
+
+  1. Unauthorized Access Attempt
+    • Triggered multiple failed login attempts
+    • Alert generated via Azure Monitor
+    • Logs analyzed in SIEM
+  2. IAM Misconfiguration
+    • Over-permissioned user account
+    • Identified and corrected using RBAC
+  3. Network Anomaly
+    • Simulated blocked traffic via NSG rules
+    • Diagnosed connectivity issue (DNS/VPN)
+  4. VM Performance Issue
+    • High CPU utilization alert triggered
+    • Investigated and resolved performance bottleneck
+
+🔍 Key Skills Demonstrated
+    • Cloud infrastructure deployment (Azure + AWS)
+    • Monitoring, alerting, and log analysis
+    • Incident response and troubleshooting
+    • Identity and access management (RBAC/IAM)
+    • Network security and segmentation
+    • Automation using PowerShell
+    
+📸 Screenshots
+    • Azure Resource Group + VNet
+    • NSG Rules Configuration
+    • Azure Monitor Alerts
+    • Splunk / Datadog Dashboards
+    • RBAC Role Assignments
+    
+📈 Outcomes
+    • Built a production-style cloud environment
+    • Reduced simulated incident response time through monitoring
+    • Strengthened security posture using least-privilege access
+    • Gained hands-on experience with tools used in real NOC/SOC environments
+    
+🚀 Next Enhancements
+    • Infrastructure as Code (Terraform)
+    • Azure Sentinel (SIEM integration)
+    • Automated alert remediation (Logic Apps)
+    • CI/CD pipeline integration
+    
+👨‍💻 Author
+
+Christopher Charleston
+Cloud Support Engineer | Azure | AWS | Security+
+
+LinkedIn: https://linkedin.com/in/christopher-charleston-6697ba114
+GitHub: https://github.com/Lacolaovo
